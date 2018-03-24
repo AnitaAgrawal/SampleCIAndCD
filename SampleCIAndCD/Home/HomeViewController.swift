@@ -29,13 +29,7 @@ class HomeViewController: UIViewController,HomeViewDelegate {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    //MAR: - Developer Methods
+    //MARK: - Developer Methods
     
     func getTheDataFromDb(){
         HomeModel.sharedHomeModel.getUsersData(searchStr: searchStr, sortBy: sortBy, ascendingOrder: ascendingOrder, pageNo: pageNo, fullList:fullList) { (dataArray) in
