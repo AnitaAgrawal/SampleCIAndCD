@@ -36,7 +36,7 @@
         <!--Home View Controller-->
         <scene sceneID="3b3-wU-U11">
             <objects>
-                <viewController id="QlW-8r-J5P" customClass="HomeViewController" customModule="SampleCIAndCD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewControllerIdentifier" id="QlW-8r-J5P" customClass="HomeViewController" customModule="SampleCIAndCD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UtO-mE-Se2"/>
                         <viewControllerLayoutGuide type="bottom" id="xVo-fm-AgJ"/>

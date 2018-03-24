@@ -22,8 +22,8 @@
 		7F4FCE2A2066410A00395224 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE292066410900395224 /* DetailViewController.swift */; };
 		7F4FCE2D2066412500395224 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE2B2066412500395224 /* DetailsTableViewCell.swift */; };
 		7F4FCE2E2066412500395224 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE2C2066412500395224 /* DetailView.swift */; };
+		7F4FCE322066549000395224 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE312066549000395224 /* HomeViewControllerTests.swift */; };
 		7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93822065F3150039B898 /* AppDelegate.swift */; };
-		7F6A93852065F3150039B898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93842065F3150039B898 /* ViewController.swift */; };
 		7F6A93882065F3150039B898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6A93862065F3150039B898 /* Main.storyboard */; };
 		7F6A938B2065F3150039B898 /* SampleCIAndCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93892065F3150039B898 /* SampleCIAndCD.xcdatamodeld */; };
 		7F6A938D2065F3150039B898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6A938C2065F3150039B898 /* Assets.xcassets */; };
@@ -71,9 +71,9 @@
 		7F4FCE292066410900395224 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7F4FCE2B2066412500395224 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		7F4FCE2C2066412500395224 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7F4FCE312066549000395224 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7F6A937F2065F3150039B898 /* SampleCIAndCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCIAndCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6A93822065F3150039B898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F6A93842065F3150039B898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F6A93872065F3150039B898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F6A938A2065F3150039B898 /* SampleCIAndCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleCIAndCD.xcdatamodel; sourceTree = "<group>"; };
 		7F6A938C2065F3150039B898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,7 +241,6 @@
 				7F4FCE09206635F600395224 /* Utilities */,
 				7F4FCE062066356500395224 /* Images */,
 				7F6A93822065F3150039B898 /* AppDelegate.swift */,
-				7F6A93842065F3150039B898 /* ViewController.swift */,
 				7F6A93862065F3150039B898 /* Main.storyboard */,
 				7F6A938C2065F3150039B898 /* Assets.xcassets */,
 				7F6A938E2065F3150039B898 /* LaunchScreen.storyboard */,
@@ -256,6 +255,7 @@
 			children = (
 				7F6A939A2065F3150039B898 /* SampleCIAndCDTests.swift */,
 				7F6A939C2065F3150039B898 /* Info.plist */,
+				7F4FCE312066549000395224 /* HomeViewControllerTests.swift */,
 			);
 			path = SampleCIAndCDTests;
 			sourceTree = "<group>";
@@ -578,7 +578,6 @@
 			files = (
 				7F4FCE1F20663F9300395224 /* userBriefView.swift in Sources */,
 				7F4FCE0E2066367D00395224 /* LoaderViewController.swift in Sources */,
-				7F6A93852065F3150039B898 /* ViewController.swift in Sources */,
 				7F4FCE252066402500395224 /* DatabaseHandler.swift in Sources */,
 				7F4FCE2020663F9300395224 /* GridTypeCollectionViewCell.swift in Sources */,
 				7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */,
@@ -600,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6A939B2065F3150039B898 /* SampleCIAndCDTests.swift in Sources */,
+				7F4FCE322066549000395224 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
