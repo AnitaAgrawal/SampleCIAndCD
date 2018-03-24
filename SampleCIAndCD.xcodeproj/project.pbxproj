@@ -17,6 +17,8 @@
 		7F4FCE2020663F9300395224 /* GridTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE1C20663F9200395224 /* GridTypeCollectionViewCell.swift */; };
 		7F4FCE2120663F9300395224 /* ListTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE1D20663F9200395224 /* ListTypeCollectionViewCell.swift */; };
 		7F4FCE2220663F9300395224 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE1E20663F9300395224 /* HomeView.swift */; };
+		7F4FCE252066402500395224 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE232066402500395224 /* DatabaseHandler.swift */; };
+		7F4FCE262066402500395224 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE242066402500395224 /* ServiceHandler.swift */; };
 		7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93822065F3150039B898 /* AppDelegate.swift */; };
 		7F6A93852065F3150039B898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93842065F3150039B898 /* ViewController.swift */; };
 		7F6A93882065F3150039B898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6A93862065F3150039B898 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		7F4FCE1C20663F9200395224 /* GridTypeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F4FCE1D20663F9200395224 /* ListTypeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F4FCE1E20663F9300395224 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7F4FCE232066402500395224 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
+		7F4FCE242066402500395224 /* ServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
 		7F6A937F2065F3150039B898 /* SampleCIAndCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCIAndCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6A93822065F3150039B898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F6A93842065F3150039B898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		7F4FCE0F20663E4D00395224 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7F4FCE232066402500395224 /* DatabaseHandler.swift */,
+				7F4FCE242066402500395224 /* ServiceHandler.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -548,11 +554,13 @@
 				7F4FCE1F20663F9300395224 /* userBriefView.swift in Sources */,
 				7F4FCE0E2066367D00395224 /* LoaderViewController.swift in Sources */,
 				7F6A93852065F3150039B898 /* ViewController.swift in Sources */,
+				7F4FCE252066402500395224 /* DatabaseHandler.swift in Sources */,
 				7F4FCE2020663F9300395224 /* GridTypeCollectionViewCell.swift in Sources */,
 				7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */,
 				7F4FCE2220663F9300395224 /* HomeView.swift in Sources */,
 				7F4FCE1A20663F8900395224 /* HomeModel.swift in Sources */,
 				7F4FCE0B2066363000395224 /* Annotation.swift in Sources */,
+				7F4FCE262066402500395224 /* ServiceHandler.swift in Sources */,
 				7F6A938B2065F3150039B898 /* SampleCIAndCD.xcdatamodeld in Sources */,
 				7F4FCE2120663F9300395224 /* ListTypeCollectionViewCell.swift in Sources */,
 				7F4FCE1120663EBB00395224 /* HomeViewController.swift in Sources */,
