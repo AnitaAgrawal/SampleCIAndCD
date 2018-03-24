@@ -15,7 +15,7 @@ class HomeViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewControllerIdentifier") as! HomeViewController
+        viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewControllerIdentifier") as? HomeViewController
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -26,6 +26,7 @@ class HomeViewControllerTests: XCTestCase {
     
     func testgoToTheDetailView(){
         XCTAssertNotNil(viewController?.goToTheDetailView(displayData: UserData()))
+        
     }
     
     func testmapViewTapped() {

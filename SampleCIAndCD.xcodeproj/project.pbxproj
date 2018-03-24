@@ -23,6 +23,7 @@
 		7F4FCE2D2066412500395224 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE2B2066412500395224 /* DetailsTableViewCell.swift */; };
 		7F4FCE2E2066412500395224 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE2C2066412500395224 /* DetailView.swift */; };
 		7F4FCE322066549000395224 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE312066549000395224 /* HomeViewControllerTests.swift */; };
+		7F4FCE36206666E700395224 /* DetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE35206666E700395224 /* DetailsViewControllerTests.swift */; };
 		7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93822065F3150039B898 /* AppDelegate.swift */; };
 		7F6A93882065F3150039B898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6A93862065F3150039B898 /* Main.storyboard */; };
 		7F6A938B2065F3150039B898 /* SampleCIAndCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93892065F3150039B898 /* SampleCIAndCD.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		7F4FCE2B2066412500395224 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		7F4FCE2C2066412500395224 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7F4FCE312066549000395224 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		7F4FCE35206666E700395224 /* DetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		7F6A937F2065F3150039B898 /* SampleCIAndCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCIAndCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6A93822065F3150039B898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F6A93872065F3150039B898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				7F6A939A2065F3150039B898 /* SampleCIAndCDTests.swift */,
 				7F6A939C2065F3150039B898 /* Info.plist */,
 				7F4FCE312066549000395224 /* HomeViewControllerTests.swift */,
+				7F4FCE35206666E700395224 /* DetailsViewControllerTests.swift */,
 			);
 			path = SampleCIAndCDTests;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4FCE36206666E700395224 /* DetailsViewControllerTests.swift in Sources */,
 				7F6A939B2065F3150039B898 /* SampleCIAndCDTests.swift in Sources */,
 				7F4FCE322066549000395224 /* HomeViewControllerTests.swift in Sources */,
 			);
