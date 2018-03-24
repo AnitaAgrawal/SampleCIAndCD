@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UXx-8B-kdk">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UXx-8B-kdk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -18,7 +18,6 @@
                 <navigationController navigationBarHidden="YES" id="UXx-8B-kdk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qgD-JL-tuK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.18431372549019609" green="0.18823529411764706" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,12 +36,12 @@
         <!--Home View Controller-->
         <scene sceneID="3b3-wU-U11">
             <objects>
-                <viewController id="QlW-8r-J5P" customClass="HomeViewController" customModule="SanthoshPracticalTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QlW-8r-J5P" customClass="HomeViewController" customModule="SampleCIAndCD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UtO-mE-Se2"/>
                         <viewControllerLayoutGuide type="bottom" id="xVo-fm-AgJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sdF-eL-t9L" customClass="HomeView" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="sdF-eL-t9L" customClass="HomeView" customModule="SampleCIAndCD" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -50,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-Lx-azD">
-                                        <rect key="frame" x="160.5" y="30" width="54" height="24"/>
+                                        <rect key="frame" x="161.5" y="30" width="52.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -89,7 +88,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1843137255" green="0.18823529410000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25385785102844238" green="0.53208047151565552" blue="0.63668841123580933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="34v-js-WmH"/>
                                     <constraint firstItem="zOH-1I-4g0" firstAttribute="width" secondItem="zOH-1I-4g0" secondAttribute="height" id="8ML-6j-15Z"/>
@@ -104,7 +103,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U0x-Um-uoP">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rM5-du-ou6">
                                     <size key="itemSize" width="347" height="219"/>
@@ -113,7 +112,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListTypeCollectionViewCellIdentifier" id="E8U-Xv-f5j" customClass="ListTypeCollectionViewCell" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListTypeCollectionViewCellIdentifier" id="E8U-Xv-f5j" customClass="ListTypeCollectionViewCell" customModule="SampleCIAndCD" customModuleProvider="target">
                                         <rect key="frame" x="14" y="10" width="347" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -203,7 +202,7 @@
                                             <outlet property="userImgVw" destination="TVH-4l-y1P" id="B6A-jZ-Yix"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridTypeCollectionViewCellIdentifier" id="enA-BH-52o" customClass="GridTypeCollectionViewCell" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridTypeCollectionViewCellIdentifier" id="enA-BH-52o" customClass="GridTypeCollectionViewCell" customModule="SampleCIAndCD" customModuleProvider="target">
                                         <rect key="frame" x="14" y="180" width="347" height="258"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -299,10 +298,10 @@
                                 </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-c3-LtH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
-                                    <outlet property="delegate" destination="sdF-eL-t9L" id="fff-Kx-ZcX"/>
+                                    <outlet property="delegate" destination="sdF-eL-t9L" id="22W-pe-dxr"/>
                                 </connections>
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-j7-qV4">
@@ -312,7 +311,7 @@
                                     <outlet property="delegate" destination="sdF-eL-t9L" id="ce1-2I-UlF"/>
                                 </connections>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH8-OQ-N3p" customClass="userBriefView" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH8-OQ-N3p" customClass="userBriefView" customModule="SampleCIAndCD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="667" width="375" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jf8-xW-hYK">
@@ -483,12 +482,12 @@
         <!--Detail View Controller-->
         <scene sceneID="sov-sI-Qer">
             <objects>
-                <viewController id="m2q-rc-xeA" customClass="DetailViewController" customModule="SanthoshPracticalTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m2q-rc-xeA" customClass="DetailViewController" customModule="SampleCIAndCD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Gt-Kd-fSn"/>
                         <viewControllerLayoutGuide type="bottom" id="isQ-lV-qBR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nfa-Ku-Q7o" customClass="DetailView" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="nfa-Ku-Q7o" customClass="DetailView" customModule="SampleCIAndCD" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -496,7 +495,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5il-Vh-lrt">
-                                        <rect key="frame" x="162" y="30" width="51.5" height="24"/>
+                                        <rect key="frame" x="162.5" y="30" width="50.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -524,7 +523,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1843137255" green="0.18823529410000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25385785100000002" green="0.53208047150000004" blue="0.63668841119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9sY-hP-enh" firstAttribute="width" secondItem="9sY-hP-enh" secondAttribute="height" id="5L8-FB-N9T"/>
                                     <constraint firstItem="tu2-Ek-JwX" firstAttribute="centerY" secondItem="5il-Vh-lrt" secondAttribute="centerY" id="Evu-hA-xfv"/>
@@ -599,7 +598,7 @@
                                         <rect key="frame" x="0.0" y="100" width="375" height="236"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTableViewCellIdentifier" rowHeight="80" id="PAg-Jw-Rw7" customClass="DetailsTableViewCell" customModule="SanthoshPracticalTest" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTableViewCellIdentifier" rowHeight="80" id="PAg-Jw-Rw7" customClass="DetailsTableViewCell" customModule="SampleCIAndCD" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAg-Jw-Rw7" id="DOK-u8-QjI">
@@ -725,7 +724,7 @@
         <!--Loader View Controller-->
         <scene sceneID="ydW-1K-PyD">
             <objects>
-                <viewController id="vtM-ZB-VlO" customClass="LoaderViewController" customModule="SanthoshPracticalTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vtM-ZB-VlO" customClass="LoaderViewController" customModule="SampleCIAndCD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fX7-8g-COv"/>
                         <viewControllerLayoutGuide type="bottom" id="4YF-qD-bkI"/>

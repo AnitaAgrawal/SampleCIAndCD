@@ -303,7 +303,7 @@ class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICol
     
     // MARK:- Keyboard notification
     
-    func keyboardWillShow (notification:NSNotification){
+    @objc func keyboardWillShow (notification:NSNotification){
         
         let userInfo:NSDictionary = notification.userInfo! as NSDictionary
         let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
@@ -316,7 +316,7 @@ class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICol
         }
     }
     
-    func keyboardWillHide (notification:NSNotification){
+    @objc func keyboardWillHide (notification:NSNotification){
         self.listCollectionVwBottomConstraint.constant = 0
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()
