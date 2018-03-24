@@ -1,0 +1,6 @@
+framework module Pods_SampleCIAndCD {
+  umbrella header "Pods-SampleCIAndCD-umbrella.h"
+
+  export *
+  module * { export * }
+}
