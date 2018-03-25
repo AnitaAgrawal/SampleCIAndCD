@@ -24,7 +24,7 @@ protocol HomeViewDelegate :class {
 }
 
 
-class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,MKMapViewDelegate {
+class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,MKMapViewDelegate,UISearchBarDelegate {
 
     /*
     // Only override draw() if you perform custom drawing.
