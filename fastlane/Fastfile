@@ -50,68 +50,6 @@ platform :ios do
     end
 
 # End Others #
-# Before #
-        lane :ensure_clean do
-            begin
-                ensure_git_status_clean
-                rescue Exception
-                reset_git_repo(force: true)
-            end
-        end
-        lane :before_integration_sandbox do |options|
-            ensure_clean
-            cocoapods
-            build_number = "#{number_of_commits}"
-            set_info_plist_value(
-                path: plistFile,
-                key: 'CFBundleVersion',
-                value: "#{build_number}",
-            )
-            if options[:version]
-                version_number = options[:version]
-                set_info_plist_value(
-                    path: plistFile,
-                    key: 'CFBundleShortVersionString',
-                    value: "#{version_number}"
-                )
-            end
-            begin
-                cert(development: true)
-                sigh(output_path: '/Library/Developer/XcodeServer/ProvisioningProfiles', skip_install: true, development: true)
-                rescue Exception
-            end
-        end
-
-        lane :before_integration_testflight do |options|
-            ensure_clean
-            cocoapods
-            if options[:version]
-                version_number = options[:version]
-                set_info_plist_value(
-                    path: plistFile,
-                    key: 'CFBundleShortVersionString',
-                    value: "#{version_number}"
-                )
-            end
-
-            build_number = "#{number_of_commits}"
-            lv = latest_testflight_build_number(version: version_number)
-            latest = "#{lv}"
-            if build_number.to_i <= latest.to_i
-                newbn = latest.to_i + 1
-                build_number = "#{newbn}"
-            end
-            set_info_plist_value(
-                path: plistFile,
-                key: 'CFBundleVersion',
-                value: "#{build_number}"
-            )
-            cert
-            sigh(output_path: '/Library/Developer/XcodeServer/ProvisioningProfiles', skip_install: true)
-        end
-
-# End Before #
-
 
 # After #
 
@@ -132,17 +70,18 @@ platform :ios do
 
         lane :after_integration_testflight do
             export_ipa
-
             begin
-            crashlytics(
-                crashlytics_path: "./Pods/Crashlytics/",
-                api_token: crashlytics_api_token,
-                build_secret: crashlytics_build_secret,
-                ipa_path: ENV["XCS_PRODUCT"],
-                notes_path: ENV["XCS_PRIMARY_REPO_DIR"] + "/ReleaseNotes.txt",
-                notifications: false,
-                groups: "homolog,dev-ios"
+
+            hockey(
+            # To get your API token, open API Tokens in Account Settings of Hockey. From there, you can find your existing API token, or create a new one.
+            api_token: '805bc46b0c9a4ca79fd1f8b1e6145df7',
+            ipa: ENV["XCS_PRODUCT"],
+            notes: ENV["XCS_PRIMARY_REPO_DIR"] + "/ReleaseNotes.txt",
+            notify: "1",
+            # public_identifier: ENV['HOCKEY_BETA_APP_ID'],
+            public_identifier: ENV['8c508c5d20904ffaad19f36f49affa4f'],
             )
+
             rescue Exception
             end
 

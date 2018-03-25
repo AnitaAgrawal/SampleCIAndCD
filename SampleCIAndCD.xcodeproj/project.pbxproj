@@ -24,6 +24,7 @@
 		7F4FCE2E2066412500395224 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE2C2066412500395224 /* DetailView.swift */; };
 		7F4FCE322066549000395224 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE312066549000395224 /* HomeViewControllerTests.swift */; };
 		7F4FCE36206666E700395224 /* DetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FCE35206666E700395224 /* DetailsViewControllerTests.swift */; };
+		7F4FCE382067507E00395224 /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F4FCE372067507E00395224 /* ReleaseNotes.txt */; };
 		7F6A93832065F3150039B898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93822065F3150039B898 /* AppDelegate.swift */; };
 		7F6A93882065F3150039B898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6A93862065F3150039B898 /* Main.storyboard */; };
 		7F6A938B2065F3150039B898 /* SampleCIAndCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A93892065F3150039B898 /* SampleCIAndCD.xcdatamodeld */; };
@@ -74,6 +75,7 @@
 		7F4FCE2C2066412500395224 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7F4FCE312066549000395224 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7F4FCE35206666E700395224 /* DetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		7F4FCE372067507E00395224 /* ReleaseNotes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
 		7F6A937F2065F3150039B898 /* SampleCIAndCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCIAndCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6A93822065F3150039B898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F6A93872065F3150039B898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		7F6A93762065F3150039B898 = {
 			isa = PBXGroup;
 			children = (
+				7F4FCE372067507E00395224 /* ReleaseNotes.txt */,
 				7F6A93812065F3150039B898 /* SampleCIAndCD */,
 				7F6A93992065F3150039B898 /* SampleCIAndCDTests */,
 				7F6A93A42065F3150039B898 /* SampleCIAndCDUITests */,
@@ -403,6 +406,7 @@
 			files = (
 				7F6A93902065F3150039B898 /* LaunchScreen.storyboard in Resources */,
 				7F6A938D2065F3150039B898 /* Assets.xcassets in Resources */,
+				7F4FCE382067507E00395224 /* ReleaseNotes.txt in Resources */,
 				7F4FCE082066357800395224 /* Home.xcassets in Resources */,
 				7F6A93882065F3150039B898 /* Main.storyboard in Resources */,
 			);
@@ -766,6 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46TULE533W;
 				INFOPLIST_FILE = SampleCIAndCD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.SampleCIAndCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -784,6 +789,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46TULE533W;
 				INFOPLIST_FILE = SampleCIAndCD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.SampleCIAndCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
