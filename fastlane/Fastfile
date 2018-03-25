@@ -1,0 +1,165 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform :ios
+platform :ios do
+# Variables #
+
+    plistFile = 'SampleCIAndCD/Info.plist'
+    target = 'SampleCIAndCD'
+
+    export_plist = "./ExportOptions.plist"
+
+    # Auxiliary Variables #
+
+    ipa_folder = "" # to be filled by lanes
+    ipa_path = "" # to be filler by lanes
+    build_number = "1.0"
+    version_number = "1.0"
+
+    # Auxiliary Lanes #
+
+    before_all do
+        version_number = get_info_plist_value(
+            path: plistFile,
+            key: 'CFBundleShortVersionString',
+        )
+    end
+
+    lane :export_ipa do
+        build_number = get_info_plist_value(
+            path: plistFile,
+            key: 'CFBundleVersion',
+        )
+
+        ipa_folder = "#{ENV['XCS_DERIVED_DATA_DIR']}/deploy/#{version_number}.#{build_number}/"
+        ipa_path = "#{ipa_folder}#{target}.ipa"
+        sh "mkdir -p #{ipa_folder}"
+
+        # Export the IPA from the archive file created by the bot
+
+        sh "xcrun xcodebuild -exportArchive -archivePath \"#{ENV['XCS_ARCHIVE']}\" -exportPath \"#{ipa_folder}\" -IDEPostProgressNotifications=YES -DVTAllowServerCertificates=YES -DVTSigningCertificateSourceLogLevel=3 -DVTSigningCertificateManagerLogLevel=3 -DTDKProvisioningProfileExtraSearchPaths=/Library/Developer/XcodeServer/ProvisioningProfiles -exportOptionsPlist '#{export_plist}'"
+    end
+
+# End Others #
+# Before #
+        lane :ensure_clean do
+            begin
+                ensure_git_status_clean
+                rescue Exception
+                reset_git_repo(force: true)
+            end
+        end
+        lane :before_integration_sandbox do |options|
+            ensure_clean
+            cocoapods
+            build_number = "#{number_of_commits}"
+            set_info_plist_value(
+                path: plistFile,
+                key: 'CFBundleVersion',
+                value: "#{build_number}",
+            )
+            if options[:version]
+                version_number = options[:version]
+                set_info_plist_value(
+                    path: plistFile,
+                    key: 'CFBundleShortVersionString',
+                    value: "#{version_number}"
+                )
+            end
+            begin
+                cert(development: true)
+                sigh(output_path: '/Library/Developer/XcodeServer/ProvisioningProfiles', skip_install: true, development: true)
+                rescue Exception
+            end
+        end
+
+        lane :before_integration_testflight do |options|
+            ensure_clean
+            cocoapods
+            if options[:version]
+                version_number = options[:version]
+                set_info_plist_value(
+                    path: plistFile,
+                    key: 'CFBundleShortVersionString',
+                    value: "#{version_number}"
+                )
+            end
+
+            build_number = "#{number_of_commits}"
+            lv = latest_testflight_build_number(version: version_number)
+            latest = "#{lv}"
+            if build_number.to_i <= latest.to_i
+                newbn = latest.to_i + 1
+                build_number = "#{newbn}"
+            end
+            set_info_plist_value(
+                path: plistFile,
+                key: 'CFBundleVersion',
+                value: "#{build_number}"
+            )
+            cert
+            sigh(output_path: '/Library/Developer/XcodeServer/ProvisioningProfiles', skip_install: true)
+        end
+
+# End Before #
+
+
+# After #
+
+        lane :after_integration_sandbox do
+            build_number = get_info_plist_value(
+                path: plistFile,
+                key: 'CFBundleVersion',
+            )
+            begin
+                vtag = "sandbox.v#{version_number}.#{build_number}"
+                add_git_tag(
+                tag: vtag
+                )
+                push_git_tags
+                rescue Exception
+            end
+        end
+
+        lane :after_integration_testflight do
+            export_ipa
+
+            begin
+            crashlytics(
+                crashlytics_path: "./Pods/Crashlytics/",
+                api_token: crashlytics_api_token,
+                build_secret: crashlytics_build_secret,
+                ipa_path: ENV["XCS_PRODUCT"],
+                notes_path: ENV["XCS_PRIMARY_REPO_DIR"] + "/ReleaseNotes.txt",
+                notifications: false,
+                groups: "homolog,dev-ios"
+            )
+            rescue Exception
+            end
+
+            build_number = get_info_plist_value(
+            path: plistFile,
+            key: 'CFBundleVersion',
+            )
+
+            begin
+            vtag = "store.v#{version_number}.#{build_number}"
+            add_git_tag(
+                tag: vtag
+            )
+            push_git_tags
+            rescue Exception
+        end
+
+end
+# End After #
+end
