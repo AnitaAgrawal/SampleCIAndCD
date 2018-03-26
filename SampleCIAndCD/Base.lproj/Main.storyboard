@@ -305,14 +305,14 @@
                                 </connections>
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-j7-qV4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="1000" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="sdF-eL-t9L" id="ce1-2I-UlF"/>
                                 </connections>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH8-OQ-N3p" customClass="userBriefView" customModule="SampleCIAndCD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="667" width="375" height="130"/>
+                                <rect key="frame" x="1000" y="667" width="375" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jf8-xW-hYK">
                                         <rect key="frame" x="10" y="15" width="100" height="100"/>
@@ -438,7 +438,7 @@
                             <constraint firstItem="5vI-c3-LtH" firstAttribute="leading" secondItem="U0x-Um-uoP" secondAttribute="leading" id="7wo-xF-Hgn"/>
                             <constraint firstItem="aZF-j7-qV4" firstAttribute="top" secondItem="5vI-c3-LtH" secondAttribute="top" id="B7L-0k-vt9"/>
                             <constraint firstItem="QNv-9h-ZBL" firstAttribute="leading" secondItem="sdF-eL-t9L" secondAttribute="leading" id="Eip-c8-dFr"/>
-                            <constraint firstItem="aZF-j7-qV4" firstAttribute="trailing" secondItem="U0x-Um-uoP" secondAttribute="trailing" id="FVD-ol-6RU"/>
+                            <constraint firstItem="aZF-j7-qV4" firstAttribute="trailing" secondItem="U0x-Um-uoP" secondAttribute="trailing" constant="1000" id="FVD-ol-6RU"/>
                             <constraint firstAttribute="trailing" secondItem="QNv-9h-ZBL" secondAttribute="trailing" id="GbG-Qd-VMb"/>
                             <constraint firstItem="5vI-c3-LtH" firstAttribute="trailing" secondItem="U0x-Um-uoP" secondAttribute="trailing" id="HTZ-3l-bmw"/>
                             <constraint firstItem="xVo-fm-AgJ" firstAttribute="top" secondItem="U0x-Um-uoP" secondAttribute="bottom" id="J6F-m9-KJD"/>

@@ -69,6 +69,10 @@ class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICol
     }
     
     override func awakeFromNib() {
+        perform(#selector(setUpTheView), with: nil, afterDelay: 0.1)
+    }
+    
+    @objc func setUpTheView(){
         gridLayoutBtn.alpha = 0.7
         updateTheViewForNavBar(selectedState: selectedLayoutType)
         showTheMapView(show: false)
@@ -83,8 +87,6 @@ class HomeView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICol
                            selector: #selector(keyboardWillHide(notification:)),
                            name: .UIKeyboardWillHide,
                            object: nil)
-
-        
     }
 
     // MARK: - Collection View Data Source
