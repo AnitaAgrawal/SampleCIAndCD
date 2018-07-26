@@ -705,7 +705,8 @@
 			baseConfigurationReference = F04D7220FFC2D4A09F8E8121 /* Pods-SampleCIAndCD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ProKarma, Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ProKarma, Inc";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AU43HTEJU5;
 				INFOPLIST_FILE = SampleCIAndCD/Info.plist;
